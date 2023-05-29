@@ -4,7 +4,7 @@ export function renderJokes(jokes, jokeContainer) {
     jokeContainer.innerHTML = '<p>No jokes found, sorry :(</p>';
   } else if (jokes.length === 1) {
     jokeContainer.innerHTML = `<p>${jokes[0].joke}</p>`;
-  } else {
+  }else {
     jokeContainer.innerHTML = '<ul>';
     jokes.forEach(joke => {
       jokeContainer.innerHTML += `<li>${joke.joke}</li>`;
