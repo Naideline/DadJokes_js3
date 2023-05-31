@@ -1,5 +1,3 @@
-//metodo para chiste al azar y search 
-//solicitud al Api
 export async function fetchJokes(url) {
   const response = await fetch(url, {
     headers: {

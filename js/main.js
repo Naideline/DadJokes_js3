@@ -5,23 +5,19 @@ import { getRandomJoke, searchJokes } from './apiUtils.js';
 const randomJoke = await getRandomJoke();
 console.log(randomJoke);
 
-// Buscar chistes por palabra clave
 const keyword = 'cat';
 const searchResults = await searchJokes(keyword);
 console.log(searchResults);
 
-//acceden al html por el id
 const randomJokeButton = document.getElementById('random-joke');
 const searchButton = document.getElementById('search-button');
 const searchInput = document.getElementById('search-joke');
 
-// Obtener los elementos del formulario
 const form = document.getElementById('search-form');
 
 // Manejar el evento submit del formulario
 form.addEventListener('submit', async function(event) {
   event.preventDefault(); // Evitar el envío del formulario
-
   const keyword = searchInput.value.trim();
   if (keyword === '') {
     jokeContainer.innerHTML = '<p>Please enter a keyword</p>';
@@ -37,6 +33,7 @@ async function handleRandomJokeClick() {
   const joke = await getRandomJoke();
   const randomJokeResult = document.getElementById('random-joke-result');
   randomJokeResult.textContent = joke;
+  localStorage.setItem('selectedJoke', joke);
 }
 
 // Manejar el evento click en el botón de búsqueda
@@ -49,9 +46,12 @@ async function handleSearchButtonClick() {
   } else {
     const jokes = await searchJokes(keyword);
     renderJokes(jokes, searchResults);
-  }
+  }if (jokes.length > 0) {
+  localStorage.setItem('selectedJoke', jokes[0].joke);
+}
 }
 
 // Listeners de eventos
 randomJokeButton.addEventListener('click', handleRandomJokeClick);
 searchButton.addEventListener('click', handleSearchButtonClick);
+
