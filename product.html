@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Producto</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <article class="main-container">
+    <section class="product-container">
+      <div class="product-visualization">
+        <img id="main-image" src="img/product-shirt-black.jpg" alt="Visualización del producto" class="image">
+        <div class="color-selector">
+          <!-- Opciones de color generadas dinámicamente por JavaScript -->
+        </div>        
+      </div>
+    </section>
+    <section id="selected-joke-container">
+      <h1 id="product-title">Black Shirt with Joke</h1>
+      <p id="product-price">$25</p>
+
+      <section id="selected-joke-container">
+        <!-- Otros elementos de la página de producto -->
+        <a id="selected-joke"></a>
+      </section>
+      
+      <div class="random-joke">
+        <!--Get another joke-->
+        <button type="button" id="random-joke" class="random-joke">Get random joke!</button>
+        <div id="random-joke-container" class="joke-container">
+          <p id="random-joke-result" href="product.html"><p>
+        </div>
+      </div>
+    </section>
+  </article>
+  <section>
+    <h2 class="image">Choose another product:</h2>
+    <div class="product-options"></div>
+  </section>
+  <script type="module" src="./js/product.js"></script>
+</body>
+</html>
