@@ -10,34 +10,30 @@
 <body>
   <article class="main-container">
     <section class="product-container">
-      <div class="product-visualization">
-        <img id="main-image" src="img/product-shirt-black.jpg" alt="Visualización del producto" class="image">
-        <div class="color-selector">
-          <!-- Opciones de color generadas dinámicamente por JavaScript -->
-        </div>        
-      </div>
+      <div class="visualizer">
+        <img id="main-img" src="img/product-shirt-black.jpg" alt="Visualización del producto"  class="visualizer__img">
+        <p  class="visualizer__joke">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <!-- Opciones de color -->
+        <div class="color-selector"></div>
     </section>
     <section id="selected-joke-container">
       <h1 id="product-title">Black Shirt with Joke</h1>
       <p id="product-price">$25</p>
-
       <section id="selected-joke-container">
-        <!-- Otros elementos de la página de producto -->
-        <a id="selected-joke"></a>
+        <p id="selected-joke"></p>
       </section>
-      
+      <!--Get another joke-->
       <div class="random-joke">
-        <!--Get another joke-->
         <button type="button" id="random-joke" class="random-joke">Get random joke!</button>
         <div id="random-joke-container" class="joke-container">
-          <p id="random-joke-result" href="product.html"><p>
+          <p id="random-joke-result" href="product.html"></p>
         </div>
       </div>
     </section>
   </article>
-  <section>
-    <h2 class="image">Choose another product:</h2>
-    <div class="product-options"></div>
+  <section class="product-option">
+    <h2 class="choose">Choose another product:</h2>
+    <div id="other-products-wrap">
   </section>
   <script type="module" src="./js/product.js"></script>
 </body>
