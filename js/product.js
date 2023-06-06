@@ -14,7 +14,7 @@ const handleRandomJokeClick = async () => {
   randomJokeResult.textContent = joke;
 };
 
-// Obtener el chiste seleccionado del almacenamiento local
+// cambiar a Id no usar localStorage - in progress
 const selectedJoke = localStorage.getItem('selectedJoke');
 if (selectedJoke) {
   const selectedJokeElement = document.getElementById('selected-joke');
