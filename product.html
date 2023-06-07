@@ -4,26 +4,45 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <title>Página de Producto</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <header>
+    <button id="cart-button" class="cart-button">
+      <i class="fas fa-shopping-cart"></i>
+    </button>
+  </header>
+  <div id="cart" class="cart">
+    <div class="cart-header">
+      <h2>Shopping cart</h2>
+    </div>
+    <div id="cart-content" class="cart-content">
+      <!-- Contenido del carrito -->
+      <button>remove all</button>
+    </div>
+    <button id="cart-close-button" class="cart-close-button"><i class="fas fa-times"></i></button>
+  </div>
   <article class="main-container">
     <section class="product-container">
       <div class="visualizer">
         <img id="main-img" src="img/product-shirt-black.jpg" alt="Visualización del producto"  class="visualizer__img">
         <p  class="visualizer__joke">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-        <!-- Opciones de color -->
-        <div class="color-selector"></div>
+        <div class="color-selector">
+          <!-- Opciones de color generadas dinámicamente por JavaScript-->
+        </div>
     </section>
     <section id="selected-joke-container">
       <h1 id="product-title">Black Shirt with Joke</h1>
       <p id="product-price">$25</p>
+      <button id="add-to-cart-btn">Add to cart</button>
       <section id="selected-joke-container">
+        <!-- Otros elementos de la página de producto -->
         <p id="selected-joke"></p>
       </section>
-      <!--Get another joke-->
       <div class="random-joke">
+        <!--Get another joke-->
         <button type="button" id="random-joke" class="random-joke">Get random joke!</button>
         <div id="random-joke-container" class="joke-container">
           <p id="random-joke-result" href="product.html"></p>

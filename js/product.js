@@ -3,7 +3,7 @@ import { initVisualizer } from './components/visualizer.js';
 import { initDetails } from './components/details.js';
 import { initProducts } from './components/other-products.js';
 import { initColors } from './components/colors.js';
-import { getRandomJokeAndUpdate } from './components/jokeUtils.js';
+import { openCart, closeCart } from './components/cart.js';
 
 const randomJokeButton = document.getElementById('random-joke');
 
@@ -14,7 +14,7 @@ const handleRandomJokeClick = async () => {
   randomJokeResult.textContent = joke;
 };
 
-// cambiar a Id no usar localStorage - in progress
+// no se usa localStorage se usa el id (in progress...)
 const selectedJoke = localStorage.getItem('selectedJoke');
 if (selectedJoke) {
   const selectedJokeElement = document.getElementById('selected-joke');
@@ -27,3 +27,4 @@ initVisualizer();
 initDetails();
 initProducts();
 initColors();
+
